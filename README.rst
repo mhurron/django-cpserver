@@ -21,3 +21,9 @@ Acknowledgements
 Idea and code snippets borrowed from `Loic d'Anterroches`__, adapted to run as a management command
 
 __ http://www.xhtml.net/scripts/Django-CherryPy-server-DjangoCerise
+
+Modifications
+=============
+
+This version is mantained by Manuel Naranjo < manuel at aircable dot net > mail
+him for modifications questions.
