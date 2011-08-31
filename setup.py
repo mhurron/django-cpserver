@@ -6,8 +6,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name="django_cpserver",
-    version="0.2",
+    name="django-cpserver",
+    version="1.2",
     description="Management commands for serving Django via CherryPy's built-in WSGI server",
     author="Peter Baumgartner",
     author_email="pete@lincolnloop.com",
