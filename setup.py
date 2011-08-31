@@ -18,5 +18,13 @@ setup(
         "django_cpserver.management.commands",
     ],
     license="BSD",
-    long_description=read("README.rst")
+    long_description=read("README.rst"),
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Framework :: CherryPy",
+        "Framework :: Django",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: BSD License",
+        "Programming Language :: Python",
+    ]
 )
