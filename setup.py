@@ -6,12 +6,12 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name="django-cpserver",
+    name="django-cpserver-op",
     version="1.2",
-    description="Management commands for serving Django via CherryPy's built-in WSGI server",
+    description="Management commands for serving Django via CherryPy's built-in WSGI server modified for OpenProximity",
     author="Peter Baumgartner",
     author_email="pete@lincolnloop.com",
-    url="https://github.com/manuelnaranjo/django-cpserver",
+    url="https://github.com/OpenProximity/django-cpserver",
     packages=[
         "django_cpserver",
         "django_cpserver.management",
