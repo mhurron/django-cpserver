@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name="django-cpserver-op",
-    version="1.2",
+    version="1.2.1",
     description="Management commands for serving Django via CherryPy's built-in WSGI server modified for OpenProximity",
     author="Peter Baumgartner",
     author_email="pete@lincolnloop.com",
@@ -19,6 +19,7 @@ setup(
     ],
     license="BSD",
     long_description=read("README.rst"),
+    install_requires=['CherryPy'],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Framework :: CherryPy",
