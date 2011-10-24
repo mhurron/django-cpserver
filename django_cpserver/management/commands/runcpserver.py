@@ -159,7 +159,9 @@ def start_server(options):
         (options['host'], int(options['port'])),
         app, 
         int(options['threads']), 
-        options['server_name']
+        options['server_name'],
+        timeout=2,
+        shutdown_timeout=2
     )
     if options['ssl_certificate'] and options['ssl_private_key']:
         server.ssl_certificate = options['ssl_certificate']
