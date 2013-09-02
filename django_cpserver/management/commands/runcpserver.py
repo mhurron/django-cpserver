@@ -154,11 +154,15 @@ def start_server(options):
     
     from cherrypy.wsgiserver import CherryPyWSGIServer as Server
     from django.core.handlers.wsgi import WSGIHandler
+    from django.core.servers.basehttp import AdminMediaHandler
+    app = AdminMediaHandler(WSGIHandler())
     server = Server(
         (options['host'], int(options['port'])),
-        WSGIHandler(), 
+        app, 
         int(options['threads']), 
-        options['server_name']
+        options['server_name'],
+        timeout=2,
+        shutdown_timeout=2
     )
     if options['ssl_certificate'] and options['ssl_private_key']:
         server.ssl_certificate = options['ssl_certificate']
