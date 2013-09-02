@@ -115,7 +115,8 @@ def poll_process(pid):
         try:
             # poll the process state
             os.kill(pid, 0)
-        except OSError, e:
+        except OSError:
+            e = sys.exc_info()[1]
             if e[0] == errno.ESRCH:
                 # process has died
                 return False
