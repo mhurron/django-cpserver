@@ -140,7 +140,7 @@ def stop_server(pidfile):
             #process didn't exit cleanly, make one last effort to kill it
             os.kill(pid, signal.SIGKILL)
             if poll_process(pid):
-                raise OSError, "Process %s did not stop."
+                raise OSError("Process %s did not stop.")
         os.remove(pidfile)
 
 def start_server(options):
