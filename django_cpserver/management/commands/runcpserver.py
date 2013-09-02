@@ -181,7 +181,7 @@ def runcpserver(argset=[], **kwargs):
         options[k.lower()] = v
     
     if "help" in options:
-        print CPSERVER_HELP
+        print(CPSERVER_HELP)
         return
         
     if "stop" in options:
@@ -204,7 +204,7 @@ def runcpserver(argset=[], **kwargs):
         fp.close()
     
     # Start the webserver
-    print 'starting server with options %s' % options
+    print('starting server with options %s' % options)
     start_server(options)
 
 
