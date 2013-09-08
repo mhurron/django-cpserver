@@ -15,6 +15,16 @@ Usage
 
 Run ``./manage.py runcpserver help`` from within your project directory
 
+Apache and mod_proxy
+====================
+By default runcpserver binds to localhost on port 8088. Another webserver can be used to expose your local CherryPy
+instance by proxying requests to the local process. Remember, runcpserver won't serve your static files.
+
+<Location /django>
+  ProxyPass http://localhost:8088
+  ProxyPassRevese http://localhost:8088
+</Location>
+
 Acknowledgements
 ================
 
